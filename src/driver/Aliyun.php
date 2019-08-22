@@ -1,4 +1,5 @@
 <?php
+
 // +----------------------------------------------------------------------
 // | ThinkPHP [ WE CAN DO IT JUST THINK ]
 // +----------------------------------------------------------------------
@@ -8,19 +9,19 @@
 // +----------------------------------------------------------------------
 // | Author: yunwuxin <448901948@qq.com>
 // +----------------------------------------------------------------------
-declare (strict_types=1);
+declare(strict_types=1);
 
 namespace thans\filesystem\driver;
 
 use League\Flysystem\AdapterInterface;
 use thans\filesystem\traits\Storage;
-use think\App;
 use think\filesystem\Driver;
 use Xxtime\Flysystem\Aliyun\OssAdapter;
 
 class Aliyun extends Driver
 {
     use Storage;
+
     protected function createAdapter(): AdapterInterface
     {
         $aliyun = new OssAdapter([

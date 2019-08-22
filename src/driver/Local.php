@@ -1,4 +1,5 @@
 <?php
+
 // +----------------------------------------------------------------------
 // | ThinkPHP [ WE CAN DO IT JUST THINK ]
 // +----------------------------------------------------------------------
@@ -8,12 +9,12 @@
 // +----------------------------------------------------------------------
 // | Author: yunwuxin <448901948@qq.com>
 // +----------------------------------------------------------------------
-declare (strict_types=1);
+declare(strict_types=1);
 
 namespace thans\filesystem\driver;
 
-use League\Flysystem\AdapterInterface;
 use League\Flysystem\Adapter\Local as LocalAdapter;
+use League\Flysystem\AdapterInterface;
 use thans\filesystem\traits\Storage;
 use think\filesystem\Driver;
 
@@ -21,7 +22,7 @@ class Local extends Driver
 {
     use Storage;
     /**
-     * 配置参数
+     * 配置参数.
      *
      * @var array
      */
