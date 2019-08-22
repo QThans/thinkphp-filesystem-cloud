@@ -1,4 +1,5 @@
 <?php
+
 namespace thans\filesystem\traits;
 
 trait Storage

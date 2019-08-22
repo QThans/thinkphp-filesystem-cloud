@@ -1,8 +1,6 @@
 <?php
 
-
 namespace thans\filesystem;
-
 
 use think\App;
 use think\filesystem\Driver;
@@ -20,7 +18,7 @@ class Filesystem
     }
 
     /**
-     * @param  null|string  $name
+     * @param null|string $name
      *
      * @return Driver
      */
@@ -28,7 +26,7 @@ class Filesystem
     {
         $name = $name ?: $this->app->config->get('filesystem.default');
 
-        if (! isset($this->disks[$name])) {
+        if (!isset($this->disks[$name])) {
             $config = $this->app->config->get("filesystem.disks.{$name}");
 
             $this->disks[$name] = App::factory($config['type'], '\\thans\\filesystem\\driver\\', $config);

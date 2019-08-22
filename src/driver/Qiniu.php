@@ -10,6 +10,7 @@ use think\filesystem\Driver;
 class Qiniu extends Driver
 {
     use Storage;
+
     protected function createAdapter(): AdapterInterface
     {
         $qiniu = new QiNiuOssAdapter($this->config['accessKey'], $this->config['secretKey'],
