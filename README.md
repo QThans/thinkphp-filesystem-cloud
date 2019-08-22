@@ -31,13 +31,14 @@ $ composer require thans/thinkphp-filesystem-cloud
     'accessSecret' => '******',
     'bucket'       => 'bucket',
     'endpoint'     => 'oss-cn-hongkong.aliyuncs.com',
+    'url'          => 'http://oss-cn-hongkong.aliyuncs.com',//不要斜杠结尾，此处为URL地址域名。
 ],
 'qiniu'  => [
     'type'      => 'qiniu',
     'accessKey' => '******',
     'secretKey' => '******',
     'bucket'    => 'bucket',
-    'cdnHost'   => '',
+    'url'       => '',//不要斜杠结尾，此处为URL地址域名。
 ],
 ```
 ## 授权
