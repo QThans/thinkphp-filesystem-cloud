@@ -3,6 +3,8 @@
     "description": "thinkphp6.0 filesystem,include Aliyun and Qiniu",
     "type": "library",
     "require": {
+        "php": ">=7.1.0",
+        "topthink/framework": "^6.0.0",
         "xxtime/flysystem-aliyun-oss": "^1.4",
         "liz/flysystem-qiniu": "^1.10"
     },
