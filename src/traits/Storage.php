@@ -6,6 +6,11 @@ trait Storage
 {
     public function getUrl(string $path)
     {
-        return isset($this->config['url']) && $this->config['url'] ? $this->config['url'].DIRECTORY_SEPARATOR.$path : $path;
+        if (strpos($path, '/') === 0) {
+            return $path;
+        }
+
+        return isset($this->config['url']) && $this->config['url'] ? $this->config['url'].DIRECTORY_SEPARATOR.$path
+            : $path;
     }
 }
