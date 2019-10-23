@@ -37,26 +37,29 @@ class Filesystem
     }
 
     /**
-     * 获取缓存配置
-     * @access public
+     * 获取缓存配置.
+     *
      * @param null|string $name    名称
      * @param mixed       $default 默认值
+     *
      * @return mixed
      */
     public function getConfig(string $name = null, $default = null)
     {
         if (!is_null($name)) {
-            return $this->app->config->get('filesystem.' . $name, $default);
+            return $this->app->config->get('filesystem.'.$name, $default);
         }
 
         return $this->app->config->get('filesystem');
     }
 
     /**
-     * 获取磁盘配置
+     * 获取磁盘配置.
+     *
      * @param string $disk
      * @param null   $name
      * @param null   $default
+     *
      * @return array
      */
     public function getDiskConfig($disk, $name = null, $default = null)
