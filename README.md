@@ -42,7 +42,7 @@ $ composer require thans/thinkphp-filesystem-cloud
 ],
 'qcloud' => [
     'type'       => 'qcloud',
-    'region'      => '***',
+    'region'      => '***', //bucket 所属区域 英文
     'appId'      => '***', // 域名中数字部分
     'secretId'   => '***',
     'secretKey'  => '***',
