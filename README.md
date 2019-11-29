@@ -54,6 +54,13 @@ $ composer require thans/thinkphp-filesystem-cloud
     'read_from_cdn'   => false,
 ]
 ```
+
+第三步：
+开始使用。
+请参考thinkphp文档
+文档地址：[https://www.kancloud.cn/manual/thinkphp6_0/1037639 ](https://www.kancloud.cn/manual/thinkphp6_0/1037639 )
+
+
 ## 授权
 
 MIT
