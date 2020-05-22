@@ -13,6 +13,6 @@ trait Storage
         }
         $adapter = $this->filesystem->getAdapter();
         return isset($this->config['url']) && $this->config['url'] ? $this->config['url'] . DIRECTORY_SEPARATOR . $path
-        : ($adapter instanceof CosAdapter) ? $adapter->getUrl($path) : $this->path($path);
+        : (($adapter instanceof CosAdapter) ? $adapter->getUrl($path) : $this->path($path));
     }
 }
