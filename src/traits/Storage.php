@@ -2,6 +2,8 @@
 
 namespace thans\filesystem\traits;
 
+use Overtrue\Flysystem\Cos\CosAdapter;
+
 trait Storage
 {
     public function getUrl(string $path)
@@ -9,8 +11,8 @@ trait Storage
         if (strpos($path, '/') === 0) {
             return $path;
         }
-
-        return isset($this->config['url']) && $this->config['url'] ? $this->config['url'].DIRECTORY_SEPARATOR.$path
-            : $path;
+        $adapter = $this->filesystem->getAdapter();
+        return isset($this->config['url']) && $this->config['url'] ? $this->config['url'] . DIRECTORY_SEPARATOR . $path
+        : ($adapter instanceof CosAdapter) ? $adapter->getUrl($path) : $this->path($path);
     }
 }
